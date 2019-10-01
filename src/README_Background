@@ -1,0 +1,33 @@
+Vigenere Cipher:
+
+- used to encrypt alphabetic text.
+- Uses "Polyalphabetic substitution".
+
+Polyalphabetic Substitution -> substitution based on multiple substitution alphabets.
+                                uses two separate encryption alphabets.
+
+- Uses the Vigenère square or Vigenère table.
+
+the Vigenere alphabet table consists of consist of alphabets written out 26x in different rows.
+A different stages of the encryption process the cipher will use a different alphabet depending on
+the rows.
+
+Note that the alphabet used at each row is dependent upon the key word used.
+    Its easier to visualize the cipher in algebra form for instance :
+
+        [A-Z]  ->  [0-25]
+        -------------------Encryption----------------------
+        |                                                  |
+        |  The plaintext(P) and key(K) are added modulo 26.|
+        |    Ei = (Pi + Ki) mod 26                         |
+        |                                                  |
+        |__________________________________________________|
+
+       SOURCE: https://www.geeksforgeeks.org/vigenere-cipher/
+
+       -------------------Decryption-----------------------
+       |                                                   |
+       |        Di = (Ei - Ki + 26) mod 26                 |
+       |___________________________________________________|
+
+ignore key generator function.
